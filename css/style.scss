@@ -1,0 +1,163 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$enable-responsive-font-sizes: true;
+$main-color: #474849;
+
+.header {
+    .btn{
+        margin: 20px auto;
+        width: 100%;
+        border: none;
+        padding: 10px 25px;
+        position: relative;
+        border: 2px solid $main-color;
+        border-radius: 4px;
+        &:focus {
+            box-shadow: none; 
+        }
+        &::before{
+            transition: all 0.85s;
+            content: '';
+            width: 0%;
+            height: 100%;
+            background: $main-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        & .btn-text{
+            color: white; 
+            mix-blend-mode: difference;
+        }
+        &:hover{
+            &::before{
+                background: $main-color;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.main {
+    .basket-wrapper {
+        .basket-item-description {
+            padding-left: 15px;
+            width: 100%;
+            outline: none;
+            border: none;
+        }
+        
+        .basket-delete-item {
+            border: none;
+            outline: none;
+            background: transparent;
+            padding-left: 15px;
+            height: 24px;
+        }
+        .checked .basket-item-description{
+            color: #474849;
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+        
+        .basket-item.delete-item {
+	        animation: slide-out-blurred-top 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+        }
+
+        @keyframes strike{
+            0%   { width : 0; }
+            100% { width: 100%; }
+          }
+
+        @keyframes slide-out-blurred-top {
+            0% {
+                -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+                        transform: translateY(0) scaleY(1) scaleX(1);
+                -webkit-transform-origin: 50% 0%;
+                        transform-origin: 50% 0%;
+                -webkit-filter: blur(0);
+                        filter: blur(0);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateY(0) scaleY(2) scaleX(0.2);
+                        transform: translateY(0) scaleY(2) scaleX(0.2);
+                -webkit-transform-origin: 50% 0%;
+                        transform-origin: 50% 0%;
+                -webkit-filter: blur(40px);
+                        filter: blur(40px);
+                opacity: 0;
+            }
+        }
+    }
+
+    .basket-item-adder {
+        .basket-add-button {
+            background: $main-color;
+            color: #fff;
+            border-radius: 50%;
+            outline: none;
+            border: 0;
+            width: 30px;
+            height: 30px;
+            margin-left: 15px;
+        }
+        .basket-item-text {
+            border: 0;
+            border-bottom: 1px solid #a3a4a4;
+            outline: none;
+            width: 100%;
+            transition: 0.7s;
+            &:active, &:hover, &:focus {
+                border-bottom: 1px solid $main-color;
+            }
+        }
+    }
+    
+
+}
+
+.footer {
+    .d-n {
+        display: none;
+    }
+    .d-b {
+        display: block;
+    }
+    .btn-bottom .btn{
+        width: 100%;
+    }
+    .btn{
+        margin: 20px auto;
+        border: none;
+        padding: 10px 25px;
+        position: relative;
+        border: 2px solid $main-color;
+        border-radius: 4px;
+        &:focus {
+            box-shadow: none; 
+        }
+        &::before{
+            transition: all 0.85s;
+            content: '';
+            width: 0%;
+            height: 100%;
+            background: $main-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        & .btn-text{
+            color: white; 
+            mix-blend-mode: difference;
+        }
+        &:hover{
+            &::before{
+                background: $main-color;
+                width: 100%;
+            }
+        }
+    }
+}

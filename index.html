@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baskets</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Baskets — веб-приложение для совместных покупок</title>
 </head>
 <body>
-    
+    <header class="header mt-3">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col">
+                    <img src="img/logo-baskets.svg" alt="logo">
+                </div>
+                
+                <div class="col-3 d-flex justify-content-end">
+                    <button class="btn"><span class="btn-text">Пригласить партнёра</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h1 class="h1 mt-5 mb-4">Список покупок:</h1>
+            
+            <div class="basket-wrapper">
+     
+            </div>
+
+            <div class="basket-item-adder mt-4 d-flex align-items-center">
+                <input class="basket-item-text" type="text" id="basket-item-name" placeholder="Введите название...">
+                <button class="basket-add-button" id="add-item-btn">＋</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="btn-bottom">
+                <button id="select-items" onclick="selectAllItems()" class="btn"><span class="btn-text">Выбрать всё</span></button>
+                <button id="unselect-items" onclick="unSelectAllItems()" class="btn d-n"><span class="btn-text">Снять всё</span></button>
+                <button id="delete-items" onclick="deleteAllItems()" class="btn mt-1"><span class="btn-text">Удалить выбранные товары</span></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

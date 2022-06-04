@@ -1,0 +1,22 @@
+{
+  "name": "baskets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pterodactylsam/baskets.git"
+  },
+  "author": "pterodactylsam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pterodactylsam/baskets/issues"
+  },
+  "homepage": "https://github.com/pterodactylsam/baskets#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
