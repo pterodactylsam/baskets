@@ -11217,7 +11217,7 @@ input {
   border: 0;
   margin-left: 15px;
   background: none;
-  padding-right: 0;
+  padding: 0;
 }
 .main .basket-item-adder .basket-item-text {
   border: 0;
