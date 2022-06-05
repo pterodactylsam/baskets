@@ -3,8 +3,13 @@
 $enable-responsive-font-sizes: true;
 $main-color: #474849;
 
+input { -webkit-border-radius: 0; } //ios border input radius
+
 .header {
-    .btn{
+    .logo-image {
+        width: 80%;
+    }
+    .btn {
         margin: 20px auto;
         width: 100%;
         border: none;
@@ -158,6 +163,14 @@ $main-color: #474849;
                 background: $main-color;
                 width: 100%;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        .logo-image {
+            width: 100%;
         }
     }
 }

@@ -11118,6 +11118,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+input {
+  -webkit-border-radius: 0;
+}
+
+.header .logo-image {
+  width: 80%;
+}
 .header .btn {
   margin: 20px auto;
   width: 100%;
@@ -11256,6 +11263,12 @@ textarea.form-control-lg {
 .footer .btn:hover::before {
   background: #474849;
   width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header .logo-image {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
