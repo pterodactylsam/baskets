@@ -42,6 +42,13 @@ input { -webkit-border-radius: 0; } //ios border input radius
             }
         }
     }
+    .mob-btn {
+        border: none;
+        background: none;
+        outline: none;
+        display: none;
+        padding-right: 0;
+    }
 }
 
 .main {
@@ -58,7 +65,6 @@ input { -webkit-border-radius: 0; } //ios border input radius
             outline: none;
             background: transparent;
             padding-left: 15px;
-            height: 24px;
         }
         .checked .basket-item-description{
             color: #474849;
@@ -99,14 +105,12 @@ input { -webkit-border-radius: 0; } //ios border input radius
 
     .basket-item-adder {
         .basket-add-button {
-            background: $main-color;
-            color: #fff;
             border-radius: 50%;
             outline: none;
             border: 0;
-            width: 30px;
-            height: 30px;
             margin-left: 15px;
+            background: none;
+            padding-right: 0;
         }
         .basket-item-text {
             border: 0;
@@ -171,6 +175,17 @@ input { -webkit-border-radius: 0; } //ios border input radius
     .header {
         .logo-image {
             width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .header {
+        .btn {
+            display: none;
+        }
+        .mob-btn {
+            display: block;
         }
     }
 }

@@ -11155,6 +11155,13 @@ input {
   background: #474849;
   width: 100%;
 }
+.header .mob-btn {
+  border: none;
+  background: none;
+  outline: none;
+  display: none;
+  padding-right: 0;
+}
 
 .main .basket-wrapper .basket-item-description {
   padding-left: 15px;
@@ -11167,7 +11174,6 @@ input {
   outline: none;
   background: transparent;
   padding-left: 15px;
-  height: 24px;
 }
 .main .basket-wrapper .checked .basket-item-description {
   color: #474849;
@@ -11206,14 +11212,12 @@ input {
   }
 }
 .main .basket-item-adder .basket-add-button {
-  background: #474849;
-  color: #fff;
   border-radius: 50%;
   outline: none;
   border: 0;
-  width: 30px;
-  height: 30px;
   margin-left: 15px;
+  background: none;
+  padding-right: 0;
 }
 .main .basket-item-adder .basket-item-text {
   border: 0;
@@ -11268,6 +11272,14 @@ input {
 @media only screen and (max-width: 1200px) {
   .header .logo-image {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header .btn {
+    display: none;
+  }
+  .header .mob-btn {
+    display: block;
   }
 }
 
