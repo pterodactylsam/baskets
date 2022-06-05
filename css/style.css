@@ -11162,6 +11162,9 @@ input {
   display: none;
   padding-right: 0;
 }
+.header .mob-btn img {
+  width: 20px;
+}
 
 .main .basket-wrapper .basket-item-description {
   padding-left: 15px;
@@ -11173,6 +11176,7 @@ input {
   border: none;
   outline: none;
   background: transparent;
+  padding: 0;
   padding-left: 15px;
 }
 .main .basket-wrapper .checked .basket-item-description {

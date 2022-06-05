@@ -48,6 +48,9 @@ input { -webkit-border-radius: 0; } //ios border input radius
         outline: none;
         display: none;
         padding-right: 0;
+        & img {
+            width: 20px;
+        }
     }
 }
 
@@ -64,6 +67,7 @@ input { -webkit-border-radius: 0; } //ios border input radius
             border: none;
             outline: none;
             background: transparent;
+            padding: 0;
             padding-left: 15px;
         }
         .checked .basket-item-description{

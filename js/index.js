@@ -4,6 +4,7 @@ const basketWrapper = document.querySelector(".basket-wrapper");
 const deleteButton = document.getElementById("delete-items");
 const selectButton = document.getElementById("select-items");
 const unSelectButton = document.getElementById("unselect-items");
+const itemDescription = document.querySelector(".basket-item-description")
 
 let items;
 !localStorage.items ? items = [] : items = JSON.parse(localStorage.getItem('items'));
@@ -19,7 +20,7 @@ const createTemplate = (item, index) => {
     return `
         <div class="basket-item d-flex mb-1 align-items-center ${item.done ? 'checked' : ''}">
             <input onclick="doneItems(${index})" class="basket-item-checkbox" type="radio" ${item.done ? 'checked' : ''}>
-            <div class="basket-item-description">${item.description}</div>
+            <div onclick="doneItemFromDescr(${index})" class="basket-item-description">${item.description}</div>
             <button onclick="deleteItems(${index})" class="basket-delete-item" id="delete-task-btn"><img src="img/cross.svg" alt="removeItem" srcset=""></button>
         </div>
     `
@@ -81,6 +82,9 @@ basketItemInput.addEventListener("keydown", function(event) {
     }
 })
 
+const doneItemFromDescr = (index) => {
+    doneItems(index)
+}
 
 const deleteItems = (index) => {
     itemsElements[index].classList.add('delete-item')
@@ -100,6 +104,7 @@ const selectAllItems = () => {
     unSelectButton.classList.toggle('d-n')
 }
 
+
 const unSelectAllItems = () => {
     items.map((item) => {
         item.done = false
@@ -114,6 +119,10 @@ const deleteAllItems = () => {
     for (let element of itemsElements) {
         if (element.classList.contains('checked')) {
             element.classList.add('delete-item')
+            setTimeout(() => {
+                window.location.reload()
+            }, 500)
+            
         }
     }
 
