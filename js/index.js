@@ -20,7 +20,7 @@ const createTemplate = (item, index) => {
     return `
         <div class="basket-item d-flex mb-1 align-items-center ${item.done ? 'checked' : ''}">
             <input onclick="doneItems(${index})" class="basket-item-checkbox" type="radio" ${item.done ? 'checked' : ''}>
-            <input onclick="editItemFromDescr(${index})" class="basket-item-description" value=${item.description}>
+            <div onclick="editItemFromDescr(${index})" class="basket-item-description">${item.description}</div>
             <button onclick="deleteItems(${index})" class="basket-delete-item" id="delete-task-btn"><img src="img/cross.svg" alt="removeItem" srcset=""></button>
         </div>
     `
