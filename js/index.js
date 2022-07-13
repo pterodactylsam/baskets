@@ -84,6 +84,9 @@ basketItemInput.addEventListener("keydown", function(event) {
 
 const editItemFromDescr = (index) => {
     const newValue = prompt('Введите новое описание:')
+    if (newValue === null) {
+        newValue = prompt('Введите новое описание:')
+    }
     items[index].description = newValue
     generateItemList()
 
