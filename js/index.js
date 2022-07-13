@@ -20,7 +20,7 @@ const createTemplate = (item, index) => {
     return `
         <div class="basket-item d-flex mb-1 align-items-center ${item.done ? 'checked' : ''}">
             <input onclick="doneItems(${index})" class="basket-item-checkbox" type="radio" ${item.done ? 'checked' : ''}>
-            <div onclick="doneItemFromDescr(${index})" class="basket-item-description">${item.description}</div>
+            <input onclick="editItemFromDescr(${index})" class="basket-item-description" value=${item.description}>
             <button onclick="deleteItems(${index})" class="basket-delete-item" id="delete-task-btn"><img src="img/cross.svg" alt="removeItem" srcset=""></button>
         </div>
     `
@@ -82,8 +82,11 @@ basketItemInput.addEventListener("keydown", function(event) {
     }
 })
 
-const doneItemFromDescr = (index) => {
-    doneItems(index)
+const editItemFromDescr = (index) => {
+    const newValue = prompt('Введите новое описание:')
+    items[index].description = newValue
+    generateItemList()
+
 }
 
 const deleteItems = (index) => {
